@@ -1,52 +1,62 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap");
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(212, 45%, 89%);
+  --Grayish-blue: hsl(220, 15%, 55%);
+  --Dark-blue: hsl(218, 44%, 22%);
+}
 
 body {
-  margin-top: 10%;
-}
-
-html,
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: hsl(212, 45%, 89%);
-}
-
-.main {
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 10px;
-}
-
-.root {
+  margin: 10%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  text-align: center;
-  width: 155px;
-  margin-top: 10px;
+  background-color: var(--Light-gray);
+  overflow: hidden;
 }
-
-.heading {
+main {
+  width: 280px;
+  height: 410px;
+  background-color: var(--White);
+  border-radius: 10px;
   text-align: center;
-  font-size: 11px;
-  text-indent: 5px;
-  padding-left: 10px;
-  padding-right: 12px;
-  margin-bottom: 0px;
-  font-weight: 700px;
-  font-family: "Outfit", sans-serif;
+  padding-top: 1rem;
 }
-
 img {
-  width: 140px;
+  width: 250px;
   border-radius: 5px;
 }
-
-.content {
-  font-size: 8px;
+h1 {
   text-align: center;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-bottom: 10px;
-  color: hsl(220, 15%, 55%);
+  font-size: 20px;
+  width: 250px;
+  padding-left: 1rem;
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  color: var(--Dark-blue);
+}
+p {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  width: 250px;
+  padding-left: 1rem;
+  font-size: 15px;
+  text-align: center;
+  color: var(--Grayish-blue);
+}
+@media screen and (max-width: 750px) {
+  body {
+    overflow: hidden;
+  }
+  main {
+    width: 300px;
+    height: 450px;
+  }
+  h1,
+  p {
+    padding-left: 1.5rem;
+  }
+  img {
+    width: 280px;
+  }
 }
